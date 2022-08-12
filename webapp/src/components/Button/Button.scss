@@ -1,0 +1,17 @@
+.button-container {
+  button {
+    min-width: 256px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 26px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 0;
+
+    border: none;
+    border-radius: 1em;
+    text-align: center;
+  }
+}
