@@ -33,9 +33,9 @@ function App() {
   return (
     <div className='App'>
       {isWinner && (
-        <div>
-          The selected card is {selectedCard.artist} {selectedCard.title}
-        </div>
+        <h1>
+          Winner
+        </h1>
       )}
       <CardManager
         musicCards={musicCards}
@@ -43,14 +43,18 @@ function App() {
         setSelectedCardFn={selectCard}
       />
       <div className='buttons'>
-        {isWinner && (
+        {isWinner ? <Button
+          text='Next'
+          clickEvent={undefined} />
+          :
           <Button
             text='Confirm'
             clickEvent={() => {
-              setWinner(true);
+              if (selectedCard.title)
+                  setWinner(true);
             }}
-          />
-        )}
+            />
+          }
       </div>
     </div>
   );

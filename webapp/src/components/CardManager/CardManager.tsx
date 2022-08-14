@@ -13,10 +13,10 @@ const CardManager = (props: Props) => {
   return (
     <div className='cards-container'>
       {props.winningCard ? (
-        <Card setSelectedCardFn={props.setSelectedCardFn} card={props.winningCard} />
+        <Card isSelected={true} setSelectedCardFn={props.setSelectedCardFn} card={props.winningCard} />
       ) : (
         props.musicCards.map((musicCard, i) => (
-          <Card key={i} setSelectedCardFn={props.setSelectedCardFn} card={musicCard} />
+          <Card isSelected={false} key={i} setSelectedCardFn={props.setSelectedCardFn} card={musicCard} />
         ))
       )}
     </div>

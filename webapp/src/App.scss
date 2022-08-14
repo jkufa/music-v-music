@@ -6,6 +6,13 @@
   justify-content: center;
   background-color: #333333;
   height: 100vh;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 64px;
+    color: white;
+    margin: 0;
+  }
 }
 
 .buttons {
