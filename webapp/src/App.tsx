@@ -30,6 +30,7 @@ function App() {
   const selectCard = (card: MusicCard) => {
     setSelectedCard(card);
   };
+  const winners: MusicCard[] = [];
   return (
     <div className='App'>
       {isWinner && (
@@ -45,13 +46,17 @@ function App() {
       <div className='buttons'>
         {isWinner ? <Button
           text='Next'
-          clickEvent={undefined} />
+          clickEvent={() => {
+            setWinner(false);
+            selectCard(emptyCard);
+          }} />
           :
           <Button
             text='Confirm'
             clickEvent={() => {
               if (selectedCard.title)
                   setWinner(true);
+                  winners.push(selectedCard);
             }}
             />
           }
